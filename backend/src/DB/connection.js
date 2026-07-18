@@ -5,13 +5,22 @@ dotenv.config();
 const connectDB= async()=>{
     try {
         
-        const uri= process.env.CONNECTION_STRING;
-        console.log(`uri : `, uri);
-        if(!uri){
-            throw new Error("MONGODB_URI is missing. Check your .env file.");
-        }
-        await mongoose.connect(uri);
-        console.log("✅ MongoDB Connected Successfully");
+        // const uri= process.env.CONNECTION_STRING;
+        // console.log(`uri : `, uri);
+        // if(!uri){
+        //     throw new Error("MONGODB_URI is missing. Check your .env file.");
+        // }
+        // await mongoose.connect(uri);
+        // console.log("✅ MongoDB Connected Successfully");
+        const uri = process.env.CONNECTION_STRING;
+console.log(uri);
+
+try {
+    await mongoose.connect(uri);
+    console.log("✅ Connected");
+} catch (err) {
+    console.error(err);
+}
     } catch (error) {
         console.error("❌ MongoDB Connection Error:", error.message);
         process.exit(1);
