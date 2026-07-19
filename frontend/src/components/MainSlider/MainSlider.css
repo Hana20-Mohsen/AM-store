@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+/* ---------- Tokens ---------- */
+.hero {
+  --bg: #efece8;
+  --ink: #1a1a1a;
+  --muted: #666;
+  --line: #cfc9c1;
+}
+
+/* ---------- Base ---------- */
+.hero {
+  width: 100%;
+  height: calc(100vh - 110px);
+  min-height: 600px;
+  background: var(--bg);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero .swiper,
+.hero .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ---------- Left content ---------- */
+.hero-left {
+  flex: 0 0 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6%;
+  padding-right: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle {
+  display: block;
+  font-family: "Alex Brush", cursive;
+  font-size: 44px;
+  color: var(--ink);
+  margin-bottom: -6px;
+  transform: rotate(-2deg);
+  transform-origin: left bottom;
+}
+
+.hero-left h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: 84px;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+.hero-left p {
+  width: 420px;
+  max-width: 100%;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 42px;
+}
+
+.hero-left .hero-cta {
+  width: 190px;
+  height: 58px;
+
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: #fff;
+
+  font-family: "Jost", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+.hero-left .hero-cta:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.hero-left .hero-cta:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+/* ---------- Right: full-bleed image ---------- */
+.hero-right {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+/* ---------- Prev / Next text navigation ---------- */
+.hero-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--ink);
+
+  transition: opacity 0.3s ease;
+}
+
+.hero-nav:hover {
+  opacity: 0.6;
+}
+
+.hero-nav-prev {
+  left: 3%;
+}
+
+.hero-nav-next {
+  right: 3%;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+}
+
+.hero-nav-arrow {
+  font-size: 22px;
+  line-height: 1;
+  font-style: normal;
+}
+
+/* ---------- Pagination ---------- */
+.hero .swiper-pagination {
+  bottom: 32px !important;
+}
+
+.hero .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: var(--ink);
+  opacity: 0.3;
+}
+
+.hero .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+    padding-top: 70px;
+  }
+
+  .hero-left {
+    flex: none;
+    padding: 0 24px;
+    text-align: center;
+    order: 2;
+    align-items: center;
+  }
+
+  .hero-subtitle {
+    transform: none;
+  }
+
+  .hero-left p {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero-left .hero-cta {
+    margin-inline: auto;
+  }
+
+  .hero-right {
+    order: 1;
+    height: 340px;
+  }
+
+  .hero-left h1 {
+    font-size: 44px;
+    letter-spacing: 3px;
+  }
+
+  .hero-nav {
+    top: auto;
+    bottom: 12px;
+    transform: none;
+  }
+
+  .hero-nav-prev {
+    left: 20px;
+  }
+
+  .hero-nav-next {
+    right: 20px;
+    color: var(--ink);
+    text-shadow: none;
+  }
+}

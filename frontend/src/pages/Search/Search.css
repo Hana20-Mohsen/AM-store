@@ -1,0 +1,44 @@
+.search-page{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:70px 20px;
+
+}
+
+
+.search-page h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:10px;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+
+.search-page p{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-bottom:50px;
+
+}
+
+
+.search-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+
+    gap:30px;
+
+}

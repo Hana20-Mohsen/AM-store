@@ -1,0 +1,256 @@
+/* ===========================
+   Fonts
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===========================
+   Contact Us
+=========================== */
+
+.contact-us{
+    width:100%;
+    background:#fff;
+    font-family:'Poppins', sans-serif;
+}
+
+/* ===========================
+   Offices Row
+=========================== */
+
+.offices-row{
+    background:#faf1eb;
+    padding:60px 5%;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+}
+
+.office-item{
+    text-align:center;
+    border-right:1px solid #eadcd2;
+}
+
+.office-item:last-child{
+    border-right:none;
+}
+
+.office-item h3{
+    font-family:'Playfair Display', serif;
+    font-size:21px;
+    font-weight:600;
+    letter-spacing:2px;
+    color:#111;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.office-item p{
+    font-family:'Poppins', sans-serif;
+    font-size:14px;
+    font-weight:300;
+    color:#888;
+    line-height:2;
+    margin:0;
+}
+
+/* ===========================
+   Split: Form + Map
+=========================== */
+
+.contact-split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:900px;
+}
+
+/* ===========================
+   Form Side
+=========================== */
+
+.contact-form-side{
+    position:relative;
+    padding:100px 12% 100px 10%;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+.floral-decoration{
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:320px;
+    height:420px;
+    opacity:0.9;
+    pointer-events:none;
+}
+
+.floral-decoration svg{
+    width:100%;
+    height:100%;
+}
+
+.script-text{
+    font-family:'Dancing Script', cursive;
+    font-weight:600;
+    font-size:32px;
+    color:#c9a99b;
+    margin-bottom:6px;
+    display:inline-block;
+}
+
+.contact-form-side h2{
+    font-family:'Playfair Display', serif;
+    font-size:44px;
+    font-weight:700;
+    text-transform:uppercase;
+    color:#111;
+    margin:0 0 28px;
+    letter-spacing:1px;
+    line-height:1.2;
+}
+
+.contact-lead{
+    font-family:'Poppins', sans-serif;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:0.8px;
+    text-transform:uppercase;
+    color:#333;
+    line-height:2;
+    max-width:420px;
+    margin-bottom:45px;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    max-width:500px;
+    position:relative;
+    z-index:1;
+}
+
+.form-group{
+    margin-bottom:-1px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    border:1px solid #e5e5e5;
+    background:#fff;
+    font-family:'Poppins', sans-serif;
+    font-size:15px;
+    font-style:italic;
+    font-weight:300;
+    color:#333;
+    padding:22px 20px;
+    box-sizing:border-box;
+    resize:none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:#aaa;
+    font-style:italic;
+    font-weight:300;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:#111;
+    position:relative;
+    z-index:2;
+}
+
+.submit-btn{
+    align-self:flex-start;
+    margin-top:30px;
+    height:56px;
+    padding:0 50px;
+    background:#111;
+    color:#fff;
+    border:none;
+    font-family:'Poppins', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:14px;
+    font-weight:500;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    background:#333;
+}
+
+.form-success{
+    margin-top:18px;
+    color:#4c7a4c;
+    font-size:14px;
+    font-style:italic;
+}
+
+/* ===========================
+   Map Side
+=========================== */
+
+.contact-map-side{
+    width:100%;
+    height:100%;
+    min-height:500px;
+}
+
+.contact-map-side iframe{
+    display:block;
+    filter:grayscale(15%);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:1200px){
+    .offices-row{
+        grid-template-columns:repeat(2, 1fr);
+        gap:40px;
+    }
+
+    .office-item{
+        border-right:none;
+        border-bottom:1px solid #eadcd2;
+        padding-bottom:30px;
+    }
+
+    .contact-split{
+        grid-template-columns:1fr;
+    }
+
+    .contact-map-side{
+        min-height:450px;
+    }
+}
+
+@media(max-width:768px){
+    .offices-row{
+        grid-template-columns:1fr;
+        padding:40px 8%;
+    }
+
+    .contact-form-side{
+        padding:60px 8%;
+    }
+
+    .contact-form-side h2{
+        font-size:30px;
+    }
+
+    .floral-decoration{
+        width:220px;
+        height:280px;
+        opacity:0.6;
+    }
+}

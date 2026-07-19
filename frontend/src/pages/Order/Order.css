@@ -1,0 +1,174 @@
+.order-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f8f5f1;
+
+    padding:40px;
+
+}
+
+.order-card{
+
+    width:550px;
+
+    background:#fff;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.order-icon{
+
+    font-size:90px;
+
+    color:#d4a9b7;
+
+    margin-bottom:25px;
+
+}
+
+.order-card h1{
+
+    font-size:36px;
+
+    color:#222;
+
+    margin-bottom:15px;
+
+}
+
+.order-card p{
+
+    color:#777;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+    font-size:17px;
+
+}
+
+.order-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:240px;
+
+    height:55px;
+
+    border-radius:50px;
+
+    background:#d4a9b7;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    font-size:16px;
+
+}
+
+.order-btn:hover{
+
+    background:#bf92a0;
+
+}
+.order-message{
+    margin:20px 0 35px;
+    color:#666;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.order-info{
+    margin:30px 0;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+    padding:25px 0;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+}
+
+.info-row span{
+    color:#777;
+    font-size:15px;
+}
+
+.info-row strong{
+    color:#222;
+    font-size:15px;
+}
+
+.pending{
+    color:#d4a9b7;
+}
+
+.email-box{
+    background:#f8f5f1;
+    border-radius:15px;
+    padding:18px;
+    margin-bottom:35px;
+    color:#666;
+    font-size:15px;
+    line-height:1.7;
+}
+
+.order-actions{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+}
+
+.order-btn{
+    width:100%;
+    height:58px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#d4a9b7;
+    color:#fff;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.order-btn:hover{
+    background:#c392a3;
+}
+
+.home-btn{
+    color:#666;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.home-btn:hover{
+    color:#d4a9b7;
+}

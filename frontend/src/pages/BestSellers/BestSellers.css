@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+/* ---------- Tokens ---------- */
+.best-sellers {
+  --ink: #171717;
+  --muted: #777;
+  --accent: #b7a79b;
+  --line: #eee;
+}
+
+/* ---------- Section ---------- */
+.best-sellers {
+  padding: 100px 7%;
+  background: #fff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-header p {
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 44px;
+  margin-top: 10px;
+  color: var(--ink);
+}
+
+.section-rule {
+  display: block;
+  width: 64px;
+  height: 1px;
+  background: var(--accent);
+  margin: 20px auto 0;
+}
+
+/* ---------- Grid ---------- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* ---------- Card ---------- */
+.product-card {
+  position: relative;
+  background: #faf7f3;
+  padding-top: 30px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 50px rgba(23, 23, 23, 0.1);
+}
+
+/* Ghost rank number — contained inside the reserved top padding,
+   never overlaps the image or neighboring cards. */
+.product-rank {
+  position: absolute;
+  top: -4px;
+  left: 16px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 1;
+  color: rgba(23, 23, 23, 0.09);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------- Image ---------- */
+.product-image {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.07);
+}
+
+.product-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 45%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.product-card:hover .product-image::after {
+  opacity: 1;
+}
+
+.product-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--ink);
+  color: #fff;
+  padding: 7px 15px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* ---------- Quick actions (wishlist / quick view) ---------- */
+.product-quick-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quick-action {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: var(--ink);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateX(14px);
+  transition: opacity 0.35s ease, transform 0.35s ease, background 0.3s ease,
+    color 0.3s ease;
+  box-shadow: 0 8px 18px rgba(23, 23, 23, 0.18);
+}
+
+.quick-action svg {
+  width: 17px;
+  height: 17px;
+}
+
+.product-card:hover .quick-action {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.quick-action:nth-child(2) {
+  transition-delay: 0.05s;
+}
+
+.quick-action:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+.quick-action:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* ---------- Info ---------- */
+.product-info {
+  position: relative;
+  z-index: 1;
+  padding: 22px 20px 26px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 21px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  color: var(--accent);
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.product-add {
+  padding: 12px 28px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.product-add:hover {
+  background: var(--ink);
+  color: #fff;
+  letter-spacing: 2.5px;
+}
+
+.product-add:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .best-sellers {
+    padding: 70px 6%;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+  }
+
+  .product-rank {
+    font-size: 44px;
+  }
+}
