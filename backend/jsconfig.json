@@ -1,0 +1,57 @@
+{
+    "compilerOptions": {
+
+        "baseUrl": "./src",
+
+        "paths": {
+
+            "@config/*": [
+                "config/*"
+            ],
+
+            "@models/*": [
+                "models/*"
+            ],
+
+            "@modules/*": [
+                "modules/*"
+            ],
+
+            "@middlewares/*": [
+                "middlewares/*"
+            ],
+
+            "@services/*": [
+                "services/*"
+            ],
+
+            "@repositories/*": [
+                "repositories/*"
+            ],
+
+            "@utils/*": [
+                "utils/*"
+            ],
+
+            "@helpers/*": [
+                "helpers/*"
+            ],
+
+            "@constants/*": [
+                "constants/*"
+            ],
+
+            "@shared/*": [
+                "shared/*"
+            ],
+
+            "@sockets/*": [
+                "sockets/*"
+            ]
+        }
+    },
+
+    "exclude":[
+        "node_modules"
+    ]
+}

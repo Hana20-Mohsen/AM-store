@@ -1,4 +1,4 @@
-import bootstrap from './src/app.controller.js'
+import bootstrap from './src/app.js'
 import express from 'express'
 import http from 'http'
 // import initSocket from './src/Socket/index.js'

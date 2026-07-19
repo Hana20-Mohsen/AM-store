@@ -1,0 +1,1 @@
+export { default as getPagination } from "./pagination.js";
